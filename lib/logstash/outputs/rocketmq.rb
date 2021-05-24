@@ -69,12 +69,12 @@ class LogStash::Outputs::Example < LogStash::Outputs::Base
 
       sendResult = @producer.send(msg)
 
-      if org.apache.rocketmq.client.producer.SendStatus::SEND_OK != result.getSendStatus
-        sendStatus = result.getSendStatus.name
+      if org.apache.rocketmq.client.producer.SendStatus::SEND_OK != sendResult.getSendStatus
+        sendStatus = sendResult.getSendStatus.name
         raise "Message Send failed! The send status is #{sendStatus}"
       end
     rescue => e
-      @logger.error('An Exception Occured!!', :message => e.message, :exception => e.class)
+      @logger.error('An Exception Occured!', :message => e.message, :exception => e.class)
       @logger.info("Message send failed: #{data}")    
     end
   end
