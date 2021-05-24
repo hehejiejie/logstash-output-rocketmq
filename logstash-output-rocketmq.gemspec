@@ -1,12 +1,12 @@
 Gem::Specification.new do |s|
   s.name = 'logstash-output-rocketmq'
-  s.version         = '0.4.0'
+  s.version         = '0.1.0'
   s.licenses = ['MIT']
   s.summary = "This example output pushes events to rocketmq"
   s.description     = "This gem is a Logstash plugin required to be installed on top of the Logstash core pipeline using $LS_HOME/bin/logstash-plugin install gemname. This gem is not a stand-alone program"
-  s.authors = ["Elastic"]
-  s.email = "info@elastic.co"
-  s.homepage = "http://www.elastic.co/guide/en/logstash/current/index.html"
+  s.authors = ["hehejiejie"]
+  s.email = "905205173@qq.com"
+  s.homepage = "https://github.com/hehejiejie/logstash-out-rocketmq"
   s.require_paths = ["lib","vendor/jar-dependencies"]
   s.platform = 'java'
 
